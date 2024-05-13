@@ -1,0 +1,25 @@
+server:
+  port: 8085
+spring:
+  flyway:
+    enable: true
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/comspauser?schema=public
+    password: postgres
+    username: postgres
+  security:
+    oauth2:
+      client:
+        registration:
+# Authorized redirect URIs(http://localhost:port/login/oauth2/code/google) port
+# should be same as server:port
+          google:
+            client-id: clientid
+            client-secret: secret
+            scope: email, profile

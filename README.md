@@ -7,4 +7,5 @@ Oauth2: client, authorization service, autoconfigure
 Spring security  
 Spring Data JPA  
 db: postgreSQL  
+docker  
 lombok
